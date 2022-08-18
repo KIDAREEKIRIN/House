@@ -1,10 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/shapeListSearchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:iconifiedByDefault="false"
+        app:queryHint="Shape Name" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="ALL"
+            android:id="@+id/allFilter"
+            android:background="@color/purple_700"
+            android:onClick="allFilterTapped"
+            android:layout_margin="2dp"
+            android:padding="2dp">
+        </Button>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="Triangle"
+            android:id="@+id/triangleFilter"
+            android:background="@color/purple_700"
+            android:onClick="triangleFilterTapped"
+            android:layout_margin="2dp"
+            android:padding="2dp">
+        </Button>
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="SQUARE"
+            android:id="@+id/squareFilter"
+            android:background="@color/purple_700"
+            android:onClick="squareFilterTapped"
+            android:layout_margin="2dp"
+            android:padding="2dp">
+        </Button>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="Octagon"
+            android:id="@+id/octagonFilter"
+            android:background="@color/purple_700"
+            android:onClick="octagonFilterTapped"
+            android:layout_margin="2dp"
+            android:padding="2dp">
+        </Button>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="RECTANGLE"
+            android:id="@+id/rectangleFilter"
+            android:background="@color/purple_700"
+            android:onClick="rectangleFilterTapped"
+            android:layout_margin="2dp"
+            android:padding="2dp">
+        </Button>
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="CIRCLE"
+            android:id="@+id/circleFilter"
+            android:background="@color/purple_700"
+            android:onClick="circleFilterTapped"
+            android:layout_margin="2dp"
+            android:padding="2dp">
+        </Button>
+    </LinearLayout>
 
     <ListView
         android:id="@+id/shapesListView"
@@ -12,4 +101,4 @@
         android:layout_height="match_parent"/>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
